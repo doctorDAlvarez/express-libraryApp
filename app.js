@@ -3,9 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const { sequelize } = require('./models')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established!')
+  } catch(err) {
+    console.error(err);
+  }
+})();
+
 
 var app = express();
 
@@ -18,6 +29,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static('public'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
