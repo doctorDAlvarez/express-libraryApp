@@ -38,7 +38,7 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   const error = new Error("Resource not found on server");
   error.status = 404;
-  console.log(error.stack);
+  // console.log(error.stack);
   res.render('page-not-found', { error });
 });
 

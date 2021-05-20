@@ -2,24 +2,24 @@ extends layout
 
 block content 
 
+
   h1 The Library
-  h4 All your books in one place.
-    
   br
   br
+
   
   form(action="/books/search" method="get")
     label(for="search" class="search-feature")
       input(id="search" type="search" name="query")
       input(class="button" id="submit" type="submit" value="Search")
       br
-      p There are #{books.length} books available.
+      p There are #{books.length} books in your search.
   p
     a.button(href='/books/new') Create New Book  
 
   br
-  each button, index in (new Array(totalPages))
-      a.button(href=`/books/pages/${index + 1}`) #{index + 1} 
+  br
+  a.button(href="/") All books
   br
   br
 
@@ -32,17 +32,10 @@ block content
         th Year
     tbody
 
-    each book in booksFiltered
+    each book in books
       tr
         td
           a(href=`/books/${book.id}`)= book.title
         td= book.author
         td= book.genre
         td= book.year
-
-  
-    
-
-    
-		
-
