@@ -55,6 +55,9 @@ body {
     border-top: 2px solid #e7e7e7;
     padding-top: 20px;
   }
+  h4 {
+    font-weight: lighter;
+  }
   
   th {
     border-bottom: 2px solid #D8B493;
@@ -99,7 +102,9 @@ body {
     color: rgb(236, 15, 15);
   }
 
-
+  #subheading {
+    font-weight: lighter;
+  }
 
   #submit {
     margin: 5px;
