@@ -1,8 +1,8 @@
 # Library-App
 Library app using Express and SQL ORM Sequelize.
 
-## Motivation
-Building and practice Database handling server-side using ORM sequelize.
+## Client:
+Piaget School Library dpt.
 
 ## Build status
 Up and Running good. ;)
@@ -43,10 +43,6 @@ Not added testing units yet to the backend code. Tested in Safari and Chrome. La
 ## Contribute
 Please feel free to clone it, test it and colaborate with anything you might think will improve the app.
 
-## Credits
-thanks to teamTreeHouse team and slack community, specially @lee and @robertm for the review and feedback before submitting.
-
-TREEHOUSE FSJS techDegree © [Diego ALvarez @doctorDAlvarez]()
 
 License (MIT)
 
